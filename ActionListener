@@ -1,0 +1,44 @@
+import javax.swing.*;
+import java.awt.event.*;
+public class FirstGui1
+{
+	public static void main(String args[])
+	{
+		JFrame frm = new JFrame("My First GUI");
+	//	Container con=();
+		
+		frm.setSize(500,500);
+		JButton btn1 = new JButton("Click");
+		btn1.setBounds(50,50,100,40);
+		
+		JButton btn2 = new JButton("me");
+		btn2.setBounds(160,50,100,40);
+		
+		JLabel lbl3 = new JLabel("me");
+		lbl3.setBounds(77,77,100,40);
+		
+		JLabel lbl4 = new JLabel("me");
+		lbl4.setBounds(187,77,100,40);
+		frm.add(btn1);
+		
+		btn1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				lbl3.setText("Button click me has clicked");
+			}
+		});
+		
+		
+		frm.add(btn1);
+		frm.add(btn2);
+		frm.add(lbl3);
+		frm.add(lbl4);
+		
+		frm.setLayout(null);
+		frm.setVisible(true);
+		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+	}
+}
